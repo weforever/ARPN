@@ -43,6 +43,5 @@ class Autoencoder(nn.Module):
         return x
 
 
-# 定义Prototypical Network
 autoencoder = Autoencoder()
 
