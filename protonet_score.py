@@ -3,14 +3,11 @@ import torch.nn as nn
 from torch.nn import functional as F
 import pandas as pd
 
-data_u = pd.read_csv(r'D:/protonet_1/data_zhinengche.csv')
+data_u = pd.read_csv(r'your file')
 data_use = data_u.loc[:,
-           ['车速', '累计里程', '总电压', '总电流', 'SOC', 'DC-DC状态', '挡位', '挡位驱动力', '挡位制动力',
-            '最高电压电池单体代号', '电池单体电压最高值', '最低电压电池单体代号', '电池单体电压最低值',
-            '最高温度探针单体代号', '最高温度值', '最低温度探针子系统代号', '最低温度值',
-            '可充电储能装置故障总数']]
+           ['Enter your data characteristics']]
 X = data_use.copy()
-y = X.pop('可充电储能装置故障总数')
+y = X.pop('target')
 
 input_dim = X.shape[1]
 # 定义Autoencoder
